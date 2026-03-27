@@ -13,3 +13,7 @@ first_name=Jane
 last_name=Doe
 
 # Do not modify the above. Start your code here.
+
+echo -e "Hello 
+$first_name\t$last_name
+How are you?"

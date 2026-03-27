@@ -1,0 +1,115 @@
+Assignment 2: Basic Bash — Test Results
+Generated: Fri Mar 27 14:24:37 UTC 2026
+
+
+============================================================
+  Exercise 1: Expensive Soda
+============================================================
+
+--- soda.sh ---
+#!/bin/bash
+# Assignment 2, Exercise 1: Expensive Soda
+#
+# Print this exact output:
+#   A soda costs $9?!
+#
+# Hint: Be careful with the $ sign — bash treats it as a variable prefix.
+# How do you prevent that?
+
+# Your code here
+
+echo "A soda costs \$9?!"--- end soda.sh ---
+
+  [PASS] Output matches exactly
+
+============================================================
+  Exercise 2: Greetings
+============================================================
+
+--- greetings.sh ---
+#!/bin/bash
+# Assignment 2, Exercise 2: Greetings
+#
+# Using the variables below, print:
+#   Hello
+#   [first_name][TAB][last_name]
+#   How are you?
+#
+# The tab must be an actual tab character, not spaces.
+# Hint: How does echo handle special characters like \t?
+
+first_name=Jane
+last_name=Doe
+
+# Do not modify the above. Start your code here.
+
+echo -e "Hello 
+$first_name\t$last_name
+How are you?"--- end greetings.sh ---
+
+  [FAIL] Output matches with tab character
+    Expected: Hello
+Jane	Doe
+How are you?
+    Got:      Hello 
+Jane	Doe
+How are you?
+
+============================================================
+  Exercise 3: Mixed Messages
+============================================================
+
+--- mixed.sh ---
+#!/bin/bash
+# Assignment 2, Exercise 3: Mixed Messages
+#
+# Print "Everything is fine" to stdout
+# Print "WARNING: SEVERE ERROR" to stderr
+#
+# Both will appear on screen when you run the script,
+# but they should travel through different streams.
+# Hint: How do you redirect output to a specific file descriptor?
+
+# Your code here
+
+echo "Everything is fine"
+echo "WARNING: SEVERE ERROR" >&2--- end mixed.sh ---
+
+  [PASS] stdout is 'Everything is fine'
+  [PASS] stderr is 'WARNING: SEVERE ERROR'
+
+============================================================
+  Exercise 4: Read, Sort and Trim
+============================================================
+
+--- pipeline.sh ---
+#!/bin/bash
+# Assignment 2, Exercise 4: Read, Sort and Trim
+#
+# Given input.dat (created below), do three things:
+#   1. Sort the lines in DESCENDING order
+#   2. Save the full sorted result to sorted.dat
+#   3. Print to stdout: skip the first line, then show the next 5 lines
+#
+# Hint: Think pipeline — you can do this in very few lines.
+#       Look into: sort, tee, head, tail
+
+printf "3\n2\n10\n5\n100\n25\n12\n13\n6\n" > input.dat
+
+# Do not modify the above. Start your code here.
+
+sort -r -n input.dat > sorted.dat | head -n 5--- end pipeline.sh ---
+
+  [PASS] sorted.dat exists with correct descending sort
+  [FAIL] stdout shows lines 2-6 of sorted result
+    Expected: 25
+13
+12
+10
+6
+    Got:      
+
+============================================================
+  SUMMARY: 4/6 tests passed
+  2 test(s) failed
+============================================================

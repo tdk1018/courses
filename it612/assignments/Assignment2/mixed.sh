@@ -9,3 +9,6 @@
 # Hint: How do you redirect output to a specific file descriptor?
 
 # Your code here
+
+echo "Everything is fine"
+echo "WARNING: SEVERE ERROR" >&2

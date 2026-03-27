@@ -8,3 +8,5 @@
 # How do you prevent that?
 
 # Your code here
+
+echo "A soda costs \$9?!"
