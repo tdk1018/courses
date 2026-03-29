@@ -1,5 +1,5 @@
 Assignment 2: Basic Bash — Test Results
-Generated: Fri Mar 27 14:24:37 UTC 2026
+Generated: Sun Mar 29 15:47:28 UTC 2026
 
 
 ============================================================
@@ -98,18 +98,13 @@ printf "3\n2\n10\n5\n100\n25\n12\n13\n6\n" > input.dat
 
 # Do not modify the above. Start your code here.
 
-sort -r -n input.dat > sorted.dat | head -n 5--- end pipeline.sh ---
+sort -r -n input.dat > sorted.dat
+sed -n "2,6 p" sorted.dat--- end pipeline.sh ---
 
   [PASS] sorted.dat exists with correct descending sort
-  [FAIL] stdout shows lines 2-6 of sorted result
-    Expected: 25
-13
-12
-10
-6
-    Got:      
+  [PASS] stdout shows lines 2-6 of sorted result
 
 ============================================================
-  SUMMARY: 4/6 tests passed
-  2 test(s) failed
+  SUMMARY: 5/6 tests passed
+  1 test(s) failed
 ============================================================
