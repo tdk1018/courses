@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Alice",
+    "email": "alice@uni.edu",
+    "grade": 92,
+    "tags": ["dean_list", "tutor"]
+  },
+  {
+    "name": "Bob",
+    "email": "bob@uni.edu",
+    "grade": 85,
+    "tags": ["lab_assistant"]
+  },
+  {
+    "name": "Carol",
+    "email": "carol@uni.edu",
+    "grade": 78,
+    "tags": []
+  },
+  {
+    "name": "David",
+    "email": "david@uni.edu",
+    "grade": 95,
+    "tags": ["dean_list", "research"]
+  },
+  {
+    "name": "Eve",
+    "email": "eve@uni.edu",
+    "grade": 88,
+    "tags": ["tutor"]
+  }
+]

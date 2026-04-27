@@ -1,0 +1,6 @@
+2026-04-19 Attendance
+alice - p
+bob patel - a
+chen,w - p
+diana - p
+e. smith - l

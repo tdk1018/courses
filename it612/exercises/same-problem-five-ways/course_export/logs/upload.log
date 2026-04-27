@@ -1,0 +1,12 @@
+2026-04-25T14:23:01Z INFO  upload accepted: alice-lab1-final-FINAL.js (412 bytes)
+2026-04-25T14:23:45Z INFO  upload accepted: Bob_Lab1_v2.js (398 bytes)
+2026-04-25T14:24:12Z ERROR upload rejected: chen lab1.js (filename contains space)
+2026-04-25T14:25:03Z INFO  upload accepted: chen lab1.js (sanitized to chen_lab1.js, 405 bytes)
+2026-04-25T14:31:18Z WARN  duplicate filename: Bob_Lab1_v2.js (overwriting prior submission)
+2026-04-25T15:02:44Z ERROR upload rejected: lab1.js (no student identifier in filename)
+2026-04-25T15:10:09Z INFO  upload accepted: diana-rodriguez-lab1.js (367 bytes)
+2026-04-25 15:30 reset connection (timeout)
+2026-04-25T15:32:01Z ERROR malformed multipart body
+2026-04-25T15:35:14Z INFO  upload accepted: evan_smith_lab1.js (388 bytes)
+2026-04-25T16:02:00Z WARN  late submission flagged: alice-lab1-final-FINAL.js (deadline 15:00)
+2026-04-25T16:08:22Z ERROR upload rejected: Bob_Lab1_v3.js (size limit 1MB exceeded; received 1.4MB)
