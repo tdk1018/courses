@@ -1,0 +1,10 @@
+# Override the repo-root *.log rule: these log files are exercise data,
+# tracked deliberately as puzzle inputs.
+!ids.log
+!door_access.log
+
+# Student scratch space (not distributed)
+solve_*.ps1
+solve_*.sh
+solve_*.lua
+*.scratch
