@@ -134,7 +134,7 @@ Other source IPs hit some of those ports, but only one IP hit *all four*.
 Each line of `ids.log` looks like:
 
 ```
-2026-04-28T03:14:22Z src=192.168.7.43 dst=10.0.0.5 port=3389 proto=TCP action=DENY
+2026-04-28T03:14:22Z src=192.0.2.55 dst=10.0.0.5 port=3389 proto=TCP action=DENY
 ```
 
 **Your task:** Find the unique source IP that touched all four target ports. Read the **last octet** of that IP (the part after the last dot).
@@ -176,7 +176,7 @@ DENIED, DENIED, DENIED, GRANTED
 Each line of `door_access.log` looks like:
 
 ```
-2026-04-28T02:14:00Z badge=B1099 door=031 action=DENIED
+2026-04-28T02:14:00Z badge=B1099 door=199 action=DENIED
 ```
 
 **Your task:** Use awk to find the unique door whose chronologically-ordered events contain a `DENIED DENIED DENIED GRANTED` subsequence. Read its `door=` value.
@@ -247,13 +247,7 @@ python3 unlock.py 1234
 
 ### Success — exit code 0
 
-Stdout includes a banner starting with **`ESCAPED`**:
-
-```
-ESCAPED -- Override accepted. Lockdown released at 03:47:12 UTC.
-Containment holds. Survivors: 4. Server room secure.
-The dispatcher daemon is shut down. The horde retreats.
-```
+Stdout begins with a banner whose first word is **`ESCAPED`**, followed by a short paragraph of flavor text describing the lockdown release. The full text is decrypted at runtime — you'll see it when the override accepts your code.
 
 ### Failure — exit code 1
 
